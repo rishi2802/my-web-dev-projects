@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align content at the top */
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for("static", filename="indexbg.png") }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color:  #1f4ea5;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            border-radius: 7px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Convergence', sans-serif;
+            color: #bbdffc;
+            margin: 0;
+        }
+
+        .main-heading {
+            font-size: 23px; /* Increased font size */
+            font-family: 'Lato', sans-serif;
+            font-weight: bold; /* Added font weight */
+            text-align: right;
+            margin-top: 135px; /* Adjust spacing */
+            margin-right: 50%; /* Adjust spacing */
+            margin-left: 3%;
+
+        }
+
+        .start-button {
+            background-color: #1f4ea5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Adjust spacing */
+        }
+
+        .start-button:hover {
+            background-color: #165192;
+        }
+        
+    footer {
+        background-color: #f0d1cf;
+        text-align: center;
+        padding: 1px 0;
+        width: 100%;
+        color: #555;
+        font-size: 0.85rem;
+        display: flex; /* Use flexbox */
+        justify-content: space-between; /* Spread contents evenly */
+        align-items: center; /* Align contents vertically centered */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 7px; /* Add border radius */
+        box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    }
+
+    footer a {
+        color: #1f4ea5;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    .start-button {
+	color: white;
+	background-color: #1f4ea5;
+	border: 5px solid transparent;
+	transition: .2s ease;
+	border-radius: 50px;
+    text-decoration: none;
+}
+.start-button:hover {
+	color:#1f4ea5;
+	background-color: white;
+	transform: scale(1.1);
+	border: 5px solid #1f4ea5;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heart Disease Prediction</h1>
+    </header>
+
+    <div class="main-heading">
+        <p>Welcome to the Heart Disease Prediction project, where we leverage the power of machine learning to assist in predicting the likelihood of heart disease.</p>
+        <p>Our goal is to empower individuals and healthcare professionals with an additional tool to make informed decisions about heart health. Whether you're a patient or a medical practitioner, this prediction tool can offer valuable insights that aid in preventive care and timely interventions.</p>
+        <p>Ready to take the first step towards a healthier heart? Click the "Get Started" button below to begin your heart disease prediction assessment.</p>
+        <a href="{{ url_for('prediction_form') }}" class="start-button">Get Started</a>
+    </div>
+    <footer>
+        <p style="margin: 0 16px;">&copy; 2023 Heart Disease Prediction App</p>
+        <p>Developed by Yerragogu Rishitha</p>
+        <p>Dataset source: UCI Machine Learning Repository</p>
+        <p style="margin: 0 16px;">Dataset link: <a href="https://archive.ics.uci.edu/ml/datasets/Heart+Disease" target="_blank">Heart Disease Dataset</a></p>
+    </footer>
+</body>
+</html>

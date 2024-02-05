@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Negative Result - Heart Disease Prediction</title>
+    <style>
+        body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 10vh;
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        background-image: url('{{ url_for("static", filename="posbg.png") }}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1f4ea5;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            border-radius: 7px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+        }
+        .header-title {
+            margin: 0 20px; /* Add margins here */
+        }
+
+
+    header h1 {
+        font-family: 'Convergence', sans-serif;
+        color: #bbdffc;
+        margin: 0;
+    }
+
+   footer {
+        background-color: #f0d1cf;
+        text-align: center;
+        padding: 1px 0;
+        width: 100%;
+        color: #555;
+        font-size: 0.85rem;
+        display: flex; /* Use flexbox */
+        justify-content: space-between; /* Spread contents evenly */
+        align-items: center; /* Align contents vertically centered */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 7px; /* Add border radius */
+        box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    }
+    footer a {
+        color: #1f4ea5;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    .back-button {
+            background-color: #1f4ea5;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #154c86;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Heart Disease Prediction</h1>
+        </div>
+        <form method="post" action="/back"> <button class="back-button" type="submit">Back to Main Page</button> </form>
+    </header>
+
+    <h2>No Heart Disease Detected</h2>
+    <p style="line-height: 1.5;">Based on the prediction, it seems that you might not have heart disease. However, it's important to take precautions to maintain a healthy heart.</p>
+    <b><p style="line-height: 1.5;">Here are some recommended precautions:</p></b>
+    <ul>
+        <li style="line-height: 1.5;">Follow a balanced diet low in saturated fats and cholesterol. Include a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats in your diet.</li>
+        <li style="line-height: 1.5;">Engage in regular physical activity. Aim for at least 30 minutes of moderate-intensity exercise, such as brisk walking, cycling, or swimming, most days of the week. Regular exercise can help improve heart health, maintain a healthy weight, and reduce stress.</li>
+        <li style="line-height: 1.5;">Avoid smoking and limit alcohol consumption. Smoking damages blood vessels and increases the risk of heart disease. Excessive alcohol consumption can raise blood pressure and contribute to heart problems.</li>
+        <li style="line-height: 1.5;">Manage stress through relaxation techniques. Chronic stress can impact heart health. Practice stress-relief activities such as deep breathing, meditation, yoga, and spending time in nature. Prioritize self-care and maintain a healthy work-life balance.</li>
+    </ul>
+    <b><p style="line-height: 1.5;">Furthermore, maintaining heart health involves making positive lifestyle changes:</p></b>
+    <ul>
+        <li style="line-height: 1.5;">Stay hydrated: Drink plenty of water throughout the day to support overall health and maintain proper circulation.</li>
+        <li style="line-height: 1.5;">Get enough sleep: Aim for 7-9 hours of quality sleep each night. Sleep plays a crucial role in heart health and overall well-being.</li>
+        <li style="line-height: 1.5;">Monitor your weight: Maintaining a healthy weight reduces the risk of heart disease. A combination of balanced diet and regular exercise can help you achieve and maintain a healthy weight.</li>
+        <li style="line-height: 1.5;">Control chronic conditions: If you have conditions like diabetes, high blood pressure, or high cholesterol, work with your healthcare provider to manage them effectively and minimize their impact on your heart health.</li>
+        <li style="line-height: 1.5;">Connect with healthcare professionals: Regular checkups allow healthcare providers to monitor your heart health, provide guidance, and adjust your healthcare plan as needed.</li>
+    </ul>
+    <p style="line-height: 1.5;">Remember that taking proactive steps towards heart health not only prevents heart disease but also contributes to an overall better quality of life. Small changes in daily habits can have a big impact on your long-term well-being. If you have any concerns or questions about heart health, consult a healthcare professional for personalized advice.</p>
+
+    <footer>
+        <p>&copy; 2023 Heart Disease Prediction App</p>
+        <p>Developed by Yerragogu Rishitha</p>
+        <p>Dataset source: UCI Machine Learning Repository</p>
+        <p>Dataset link: <a href="https://archive.ics.uci.edu/ml/datasets/Heart+Disease" target="_blank">Heart Disease Dataset</a></p>
+    </footer>
+</body>
+</html>

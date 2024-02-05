@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Supply Network</title>
+ 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/jal_jeevan_mission_logo.jpg" alt="Jal Jeevan Mission Logo">
+                <h1>WATER SUPPLY NETWORK MAP</h1>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Water Supply Network Components</h2>
+            <button id="select-component">Select Water supply Component</button>
+            <div id="component-form" >
+                <form id="addComponentForm">
+                    <label for="type">Component Type:</label>
+                    <select id="type" name="type">
+                        <option value="none">Select</option>
+                        <option value="hydrant">Hydrant</option>
+                        <option value="tank">Tank</option>
+                        <option value="purifier">Purifier</option>
+                        <option value="valve">Valve</option>
+                        <option value="pipe">Pipe</option>
+                    </select>
+                    <label for="componentId">Component ID:</label>
+                    <input type="text" id="componentId" name="componentId">
+                    <br><button type="submit">Add Component</button>
+                    
+                </form>
+             
+            </div>
+        </div>
+
+        
+        <div id="map" class="map"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
